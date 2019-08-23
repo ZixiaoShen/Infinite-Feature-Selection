@@ -35,5 +35,5 @@ test_y = test(:, Target);
 % IFS
 [r_IFS, w_IFS] = infFS(train_X, train_y, 0.5, 1, 0)
 
-%% 
+%% normalization process
 w_IFS_norm = mapminmax(w_IFS, 0, 1);

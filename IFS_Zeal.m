@@ -15,7 +15,6 @@ function [Rank, Score] = IFS_Zeal(train_X, train_y, alpha, supervision, verbose)
         mu_sample_negative = mean(sample_negative);
         mu_sample_positive = mean(sample_positive);
         priors_corr = ([mu_sample_positive - mu_sample_negative].^2);
-
-
-
+        hello world
+        
 end
