@@ -2,7 +2,7 @@ clear;
 clc;
 
 %% load the data
-load('/home/zealshen/Dropbox/DATA/UCI/WBC/wbc.mat');
+load('/Users/shenzixiao/Dropbox/DATA/UCI/WBC/wbc.mat');
 data = table2array(breastcancerwisconsin);
 
 %% data preprocessing
@@ -33,7 +33,7 @@ test_y = test(:, Target);
 
 %% Feature Selection Process
 % IFS
-[r_IFS, w_IFS] = infFS(train_X, train_y, 0.5, 1, 0)
+[r_IFS, w_IFS] = IFS_Zeal(train_X, train_y, 0.5, 1, 0)
 
 %% normalization process
 w_IFS_norm = mapminmax(w_IFS, 0, 1);

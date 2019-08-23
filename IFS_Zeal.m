@@ -16,7 +16,7 @@ function [Rank, Score] = IFS_Zeal(train_X, train_y, alpha, supervision, verbose)
         mu_sample_positive = mean(sample_positive);
         priors_corr = ([mu_sample_positive - mu_sample_negative].^2);
         
-        std_postive = std(sample_postive).^2;
+        std_postive = std(sample_positive).^2;
         total_std = std_postive + std(sample_negative).^2;
         total_std(find(total_std == 0)) = 10000;
         
